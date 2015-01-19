@@ -3,12 +3,21 @@ var browserify = require('browserify')
   , envify = require('envify/custom')
   , uglifyify = require('uglifyify')
   , defaults = require('defaults')
+  , path = require('path')
   , to5path = './node_modules/6to5ify/node_modules/6to5-core/'
   , production = process.env.NODE_ENV === 'production'
 
 module.exports = exports = function(root, options) {
 	options = setOptionDefaults(options)
-	
+
+	if(path.extname(root)) {
+		//is a file
+		return function* (next) {
+			this.body = createBundle(root, options)
+		}
+	}
+
+	//is a directory
 	return function* (next) {
 		if(!options.exts.test(this.path)) {
 			return yield next

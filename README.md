@@ -4,7 +4,7 @@ middleware for kent.js. serves js bundles to the browser.
 
 ```javascript
 var serve = require('kent-serve-browser')
-app.get('/index.js', serve('index.js'))
+app.get('/index.js', serve(__dirname + 'index.js'))
 ```
 
 ## options
