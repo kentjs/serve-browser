@@ -1,6 +1,11 @@
 # kent-serve-browser
 
-serves js bundles to the browser
+middleware for kent.js. serves js bundles to the browser.
+
+```javascript
+var serve = require('kent-serve-browser')
+app.get('/index.js', serve('index.js'))
+```
 
 ## options
 
