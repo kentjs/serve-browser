@@ -2,6 +2,9 @@
 logs
 *.log
 
+# Cache
+.cache
+
 # Runtime data
 pids
 *.pid
@@ -26,3 +29,4 @@ node_modules
 
 # Users Environment Variables
 .lock-wscript
+

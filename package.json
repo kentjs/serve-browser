@@ -19,8 +19,10 @@
   "dependencies": {
     "6to5ify": "^3.1.2",
     "browserify": "^8.1.1",
+    "debug": "*",
     "defaults": "^1.0.0",
     "envify": "^3.2.0",
+    "es6ify": "^1.6.0",
     "uglifyify": "^3.0.1"
   }
 }
